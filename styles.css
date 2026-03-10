@@ -41,6 +41,9 @@ body {
 
 .brand-mark svg {
   stroke: var(--rust);
+  width: 22px;
+  height: 22px;
+  transform: translateY(-1px);
 }
 
 .nav { display: flex; align-items: center; gap: 1rem; }
