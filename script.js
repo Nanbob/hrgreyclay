@@ -32,21 +32,3 @@ lb.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
 });
-
-// Optional: force preferred domain (non‑www + HTTPS)
-// If someone hits http:// or https://www., redirect to https://hrgreyclay.co.uk
-(function enforceCanonical() {
-  const host = window.location.host;
-  const isWWW = host.startsWith('www.');
-  const isHTTPS = window.location.protocol === 'https:';
-  const target = 'hrgreyclay.co.uk';
-
-  if (host !== target) {
-    // Replace host and ensure https
-    const newUrl = 'https://' + target + window.location.pathname + window.location.search + window.location.hash;
-    window.location.replace(newUrl);
-  } else if (!isHTTPS) {
-    window.location.replace('https://' + host + window.location.pathname + window.location.search + window.location.hash);
-  }
-})();
-``
