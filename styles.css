@@ -1,11 +1,11 @@
 /* ========== Theme ========== */
 :root{
-  --sand: #F4EFEA;
-  --rust: #B65A35;      /* rusty orange */
-  --rust-700: #8E4023;
-  --moss: #3E6B4A;      /* mossy green */
-  --charcoal: #2E2A27;
-  --stone: #6C625B1a;   /* tint */
+  --sand: #EDE7DF;       /* softer, duskier */
+  --rust: #7A3E21;       /* deep autumn rust */
+  --rust-700: #5C2D18;   /* darker accent */
+  --moss: #2C4733;       /* deep forest green */
+  --charcoal: #1F1B18;   /* moodier text */
+  --stone: #3B362F22;    /* subtle border tint */
 }
 
 /* Resets & base */
@@ -23,32 +23,34 @@ body {
 
 /* Header */
 .site-header {
-  position: sticky; top: 0; z-index: 10;
-  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--charcoal);
   border-bottom: 1px solid var(--stone);
   backdrop-filter: saturate(120%) blur(2px);
 }
+
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   padding: .9rem 0;
 }
 .brand {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  margin: 0; letter-spacing: .5px; font-weight: 650;
-  display: flex; align-items: center; gap: .6rem;
+  color: var(--sand);
 }
-.brand-mark {
-  color: var(--moss);
-  font-weight: 700;
-  transform: translateY(-1px) rotate(-12deg);
+
+.brand-mark svg {
+  stroke: var(--rust);
 }
 
 .nav { display: flex; align-items: center; gap: 1rem; }
 .nav-link {
-  color: var(--charcoal); text-decoration: none; font-weight: 500;
-  border-bottom: 1px solid transparent;
+  color: var(--sand);
 }
-.nav-link:hover { border-color: var(--rust); color: var(--rust-700); }
+.nav-link:hover {
+  border-color: var(--rust); 
+  color: var(--rust);
+}
 
 .button {
   display: inline-block;
@@ -57,8 +59,16 @@ body {
   transition: transform .15s ease, box-shadow .15s ease, background-color .2s ease;
   box-shadow: 0 4px 14px -8px rgba(62,107,74,.5);
 }
-.button:hover { transform: translateY(-1px); }
-.button.email { background: var(--rust); box-shadow: 0 4px 14px -8px rgba(182,90,53,.6); }
+
+.button {
+  background: var(--moss);
+  color: #fff;
+}
+
+.button.email {
+  background: var(--rust);
+}
+
 .button.email:hover { background: var(--rust-700); }
 
 /* Hero */
