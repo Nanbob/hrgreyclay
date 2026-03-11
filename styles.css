@@ -161,7 +161,7 @@ body {
 /* Lightbox */
 .lightbox {
   position: fixed; inset: 0; display: none; place-items: center;
-  background: rgba(122,62,34,.28); z-index: 50; padding: 2rem;
+  background: rgba(122,62,34,.55); z-index: 50; padding: 2rem;
 }
 .lightbox.open { display: grid; }
 .lightbox-image {
